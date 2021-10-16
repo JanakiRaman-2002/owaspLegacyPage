@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='parallax.css')}}">
+    <!-- <link rel="stylesheet" href="card.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Legacy</title>
+</head>
+<body>
+    <div id="hero">
+        
+        <div class="layer-bg layer" id="l"></div>
+        <div class="layer-1 layer" id="l1"></div>
+        <div class="layer-2 layer" id="l2"></div>
+        <div class="layer-3 layer" id="l3"></div>
+        <div class="layer-overlay layer" id="ol"><h1 class="teams">Meet Our </h1></div>
+        <div class="layer-4 layer" id="l4"></div>
+        <div class="title team neon" id="teamtext">
+            <h1 class="borderku">Legacy</h1>
+        </div>
+    </div>
+      <div id="hero-mobile"></div>
+      <div id="content" style="height:5000px;z-index: 4;justify-content: center;align-items: center;">
+        
+         
+         
+         <div class="cards-container">
+
+          {%for i in range(0,context)%}  
+
+
+            <div class="card">
+              <div class="circle target">
+                <div class="line target"></div>
+              </div>
+              <span class="span span-1 target"></span>
+              <span class="span span-2 target"></span>
+              <span class="span span-3 target"></span>
+              <span class="span span-4 target"></span>
+              <div class="content target">
+                <div class="position target">Chapter Lead</div>
+                <div class="links target">
+                  <a class="linkedin target fab fa-linkedin" href="https://www.udemy.com/">
+                  </a>
+                  <a class="github target fab fa-github" href="#"> 
+                  </a>
+                </div>
+              </div>
+              <div class="name target"><p>Apratim Shukla</p></div>
+              <img src="apratim shukla.jpg" alt="Not found" class="image target" />
+            </div>
+          {%endfor%}
+
+            
+          </div>
+
+
+            
+         </div>
+         
+         
+         
+      </div>
+
+      
+      
+</body>
+
+<script src="{{ url_for('static', filename='parallax.js')}}"></script>
+<script src="{{ url_for('static', filename='card.js')}}"></script>
+</html>
